@@ -332,4 +332,11 @@ body > footer a {
   body.is-page main article > .nested-copy-line-height {
     font-size: 16px;
   }
+  
+  .comments {
+  width: 100%;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
 }
