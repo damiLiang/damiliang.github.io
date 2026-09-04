@@ -1,0 +1,335 @@
+/* Ananke: clean, compact and full-width technical blog */
+
+:root {
+  --page: #fffafb;
+  --surface: #ffffff;
+  --header: #f3dce1;
+  --header-deep: #ead0d6;
+  --accent: #bd7685;
+  --accent-hover: #a75f70;
+  --text: #352e30;
+  --body-text: #554d50;
+  --muted: #877c7f;
+  --line: #f0e4e7;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background: var(--page) !important;
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  letter-spacing: 0;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+body > footer {
+  flex: 0 0 auto;
+}
+
+/* Header: hide the duplicated name in the upper-left corner. */
+body > header nav {
+  display: none;
+}
+
+body > header > div {
+  background: var(--header) !important;
+}
+
+body.is-home > header > div {
+  min-height: 180px;
+  padding: 0 !important;
+}
+
+body.is-home > header .tc-l {
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px !important;
+  text-align: center;
+}
+
+body.is-home > header h1 {
+  margin: 0;
+  color: #ffffff !important;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Home: remove unused introduction space and keep the page compact. */
+body.is-home main.pb7 {
+  padding-bottom: 20px;
+}
+
+body.is-home main > article:empty {
+  display: none;
+}
+
+body.is-home main > .pa3 {
+  width: auto;
+  max-width: none;
+  padding: 28px 5vw 24px;
+}
+
+body.is-home main section {
+  max-width: none;
+}
+
+/* Home article card. */
+body.is-home article.bb.b--black-10 {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 5px 18px rgba(24, 54, 58, 0.07);
+}
+
+body.is-home article.bb.b--black-10 > div {
+  padding: 24px 32px;
+}
+
+body.is-home article time {
+  display: block;
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+body.is-home article h1 {
+  margin: 0 0 16px;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+body.is-home article h1 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+body.is-home article h1 a:hover {
+  color: var(--accent);
+}
+
+body.is-home article .nested-links {
+  color: var(--body-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+body.is-home article .nested-links p {
+  margin: 0 0 12px;
+}
+
+body.is-home article .nested-links h2 {
+  margin: 18px 0 10px;
+  color: #294148;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+body.is-home article p.f6.lh-copy.mv0 {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+body.is-home article a.ba {
+  padding: 8px 15px;
+  margin-top: 10px;
+  color: #ffffff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.is-home article a.ba:hover {
+  color: #ffffff;
+  background: var(--accent-hover);
+}
+
+/* Article page: slim top bar and full-width reading area. */
+body.is-page > header > div {
+  min-height: 18px;
+  background: var(--header) !important;
+}
+
+body.is-page main.pb7 {
+  width: 100%;
+  padding: 0 0 32px;
+}
+
+body.is-page main > article.flex-l {
+  display: block;
+  box-sizing: border-box;
+  width: calc(100% - 10vw);
+  max-width: none;
+  margin: 28px 5vw 0;
+  padding: 32px 42px 42px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 5px 18px rgba(24, 54, 58, 0.06);
+}
+
+body.is-page main article > header {
+  margin-top: 0;
+}
+
+body.is-page main article aside a {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body.is-page main article header h1 {
+  margin: 12px 0 14px;
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+body.is-page main article header p,
+body.is-page main article header time {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+body.is-page main article header p {
+  margin: 0 0 6px;
+}
+
+body.is-page main article header time {
+  margin: 0 0 24px;
+}
+
+body.is-page main article > .nested-copy-line-height {
+  width: 100%;
+  padding-right: 0;
+  color: var(--body-text);
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+body.is-page main article > .nested-copy-line-height h2 {
+  margin: 30px 0 14px;
+  padding-bottom: 8px;
+  color: #274248;
+  font-size: 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+body.is-page main article > .nested-copy-line-height h3 {
+  margin: 26px 0 12px;
+  color: var(--accent);
+  font-size: 21px;
+}
+
+body.is-page main article a {
+  color: var(--accent);
+}
+
+body.is-page main article pre {
+  overflow-x: auto;
+  padding: 18px 20px;
+  color: #ecf2f2;
+  background: #183238;
+  border-radius: 5px;
+  line-height: 1.65;
+}
+
+body.is-page main article code {
+  font-family: Consolas, "Courier New", monospace;
+}
+
+body.is-page main article :not(pre) > code {
+  padding: 2px 6px;
+  color: #9c3046;
+  background: #f0f3f2;
+  border-radius: 3px;
+}
+
+body.is-page main article img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+/* Footer. */
+body > footer {
+  padding: 16px 5vw;
+  color: #d9e2e2;
+  background: var(--header-deep) !important;
+}
+
+body > footer a {
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  body.is-home > header > div,
+  body.is-home > header .tc-l {
+    min-height: 130px;
+  }
+
+  body.is-home > header h1 {
+    font-size: 29px;
+  }
+
+  body.is-home main > .pa3 {
+    padding: 18px 14px;
+  }
+
+  body.is-home article.bb.b--black-10 > div {
+    padding: 20px;
+  }
+
+  body.is-home article h1 {
+    font-size: 23px;
+  }
+
+  body.is-page main > article.flex-l {
+    width: 100%;
+    margin: 0;
+    padding: 26px 20px 34px;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body.is-page main article header h1 {
+    font-size: 29px;
+  }
+
+  body.is-page main article > .nested-copy-line-height {
+    font-size: 16px;
+  }
+}

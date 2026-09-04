@@ -1,8 +1,17 @@
-baseURL = 'https://damiliang.github.io/'
-languageCode = 'zh-cn'
-title = '我的博客'
-theme = 'ananke'
+baseURL = "https://damiliang.github.io/"
+title = "大米良的技术博客"
+theme = "ananke"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
 
 [params]
-  author = '大米良'
-  description = '记录技术学习与实践'
+  description = "记录 Java、项目实践与学习笔记"
+  author = "大米良"
+  background_color_class = "bg-navy"
+  body_classes = "avenir bg-near-white"
+  post_content_classes = "avenir"
+  recent_posts_number = 6
+  date_format = ":date_long"
+
+[params.ananke]
+  custom_css = ["custom.css"]
