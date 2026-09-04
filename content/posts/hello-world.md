@@ -1,6 +1,6 @@
 +++
 date = '2026-09-04T10:48:10+08:00'
-draft = true
+draft = false
 title = '我的第一篇文章'
 
 summary = '今天完成了 Hugo 博客的基本搭建。'
